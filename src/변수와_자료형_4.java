@@ -21,32 +21,32 @@ public class 변수와_자료형_4 {
         l1.add(0,1); // index로 값 추가
         System.out.println("l1 = " + l1);
 
-        // 1-2. get
+        // 1-2. get - 값 가져오기
         System.out.println("== get ==");
         System.out.println(l1.get(0));
         System.out.println(l1.get(3));
 
-        // 1-3 size
+        // 1-3 size - 크기 가져오기
         System.out.println("== size ==");
         System.out.println(l1.size());
 
-        // 1-4 remove
+        // 1-4 remove - 값 제거하기
         System.out.println("== remove ==");
         System.out.println(l1.remove(0)); // 지우는 값 return
         System.out.println("l1 = " + l1); // 맨 앞에 위치했던 1이 지워졌다.
 
-        System.out.println(l1.remove(Integer.valueOf(2))); // 값이 존재하면 true 반환
+        System.out.println(l1.remove(Integer.valueOf(2))); // 값이 존재하면 true 반환 / true 인경우 값 반환
         //ArrayList의 remove() 메서드는 인덱스를 인수로 받아 해당 인덱스의 요소를 제거하는 것과 다른 하나는 객체를 인수로 받아 그 객체와 동일한 첫번째 요소를 제거하는 것
         //Primitive type인 int를 remove()에 전달 할때, 자바는 이를 자동으로 Integer 객체로 박싱(Boxing)하지만, remove()메서드는 이를 인덱스로 해석한다.
         //따라서 정수 값을 실제 요소로 제거하려는 경우에는 Integer.valueOf()를 사용해서 Integer 객체를 명시적으로 제공해야 한다.
         System.out.println("l1 = " + l1);
         
-        // 1-5 clear
+        // 1-5 clear - ArrayList 아예 클리어하기
         System.out.println("== clear ==");
         l1.clear();
         System.out.println("l1 = " + l1);
 
-        // 1-6. sort
+        // 1-6. sort - ArrayList 정렬하기
         System.out.println("== sort ==");
         ArrayList l2 = new ArrayList();
         l2.add(5);
@@ -57,7 +57,7 @@ public class 변수와_자료형_4 {
         l2.sort(Comparator.reverseOrder()); // 내림 차순
         System.out.println("l2 = " + l2);
 
-        // 1-7 contains
+        // 1-7 contains - 값이 포함되어있는지 확인 - true, false
         System.out.println("== contains ==");
         System.out.println(l2.contains(1));
         System.out.println(l2.contains(3));
@@ -72,7 +72,7 @@ public class 변수와_자료형_4 {
         map.put("망고",203000);
         System.out.println("map = " + map);
 
-        //  2-2 get
+        //  2-2 get - key 값으로 값 가져오기
         System.out.println(map.get("a")); // null 출력
         System.out.println(map.get("가격"));
 
@@ -87,7 +87,7 @@ public class 변수와_자료형_4 {
         System.out.println(map.containsKey("name"));
         System.out.println(map.containsKey("가격")); // 이미 지웠기 때문에 null 발생
 
-        // 3. Generics
+        // 3. Generics - 자료형 명시 지정
         System.out.println("== Generics ==");
         ArrayList l3 = new ArrayList(); // 모든 자료형을 넣을 수 있다.
         l3.add(1);
